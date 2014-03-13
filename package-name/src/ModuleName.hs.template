@@ -19,4 +19,4 @@ getSubHomeR = lift $$ defaultLayout [whamlet|
 |]
 
 instance Yesod master => YesodSubDispatch MySub (HandlerT master IO) where
-    yesodSubDispath = $$(mkYesodSubDispatch resourcesMySub)
+    yesodSubDispatch = $$(mkYesodSubDispatch resourcesMySub)
