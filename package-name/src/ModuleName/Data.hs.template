@@ -1,4 +1,4 @@
-{-# LANGUAGE FlexibleInstances, MultiParamTypeClasses, QuasiQuotes, TemplateHaskell #-}
+{-# LANGUAGE FlexibleInstances, MultiParamTypeClasses, QuasiQuotes, TemplateHaskell, TypeFamilies #-}
 module $moduleName.Data where
 
 import Yesod
