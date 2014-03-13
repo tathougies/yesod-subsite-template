@@ -10,7 +10,7 @@ import Yesod
 
 -- | This is the handler for the route specified in $moduleName.Data
 getSubHomeR :: Yesod master => HandlerT MySub (HandlerT master IO) Html
-getSubHomeR = lift $ defaultLayout [whamlet|
+getSubHomeR = lift $$ defaultLayout [whamlet|
 <h1>Welcome to my subsite!
 <footer>This subsite was created using \
 <a href="https://github.com/fujimura/hi">hi
@@ -19,4 +19,4 @@ getSubHomeR = lift $ defaultLayout [whamlet|
 |]
 
 instance Yesod master => YesodSubDispatch MySub (HandlerT master IO) where
-    yesodSubDispath = $(mkYesodSubDispatch resourcesMySub)
+    yesodSubDispath = $$(mkYesodSubDispatch resourcesMySub)
