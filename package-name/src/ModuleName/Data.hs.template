@@ -1,0 +1,12 @@
+{-# LANGUAGE FlexibleInstances, MultiParamTypeClasses, QuasiQuotes, TemplateHaskell #-}
+module $moduleName.Data where
+
+import Yesod
+
+-- TODO Replace this with your subsite's data declarations
+data MySub = MySub
+
+-- This is the Template Haskell that will make this into a subsite!
+mkYesodSubData "MySub" [parseRoutes|
+/ SubHomeR GET
+|]
